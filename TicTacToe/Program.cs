@@ -212,7 +212,7 @@
                    (
                        (field[0][0] == mode && field[0][1] == mode && field[0][2] == mode)
                     || (field[1][0] == mode && field[1][1] == mode && field[1][2] == mode)
-                    || (field[2][0] == mode && field[0][1] == mode && field[0][2] == mode)
+                    || (field[2][0] == mode && field[2][1] == mode && field[2][2] == mode)
                     )
                 || (
                        (field[0][0] == mode && field[1][0] == mode && field[2][0] == mode)
