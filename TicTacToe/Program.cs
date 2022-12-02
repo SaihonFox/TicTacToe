@@ -139,30 +139,33 @@
                                 Console.ResetColor();
                                 Console.SetCursorPosition(4, 0);
                                 Console.Write("Winner is " + mode);
+                                
                             }
-
-                            mode = mode == 'X' ? '0' : 'X';
-
-                            Console.ResetColor();
-                            Console.SetCursorPosition(4, 1);
-                            Console.Write(mode);
-
-                            if (!field[0].Contains('-'))
-                                isTie[0] = true;
-                            if (!field[1].Contains('-'))
-                                isTie[1] = true;
-                            if (!field[2].Contains('-'))
-                                isTie[2] = true;
-
-                            if (isTie[0] && isTie[1] && isTie[2])
+                            else
                             {
-                                Console.ResetColor();
-                                Console.SetCursorPosition(4, 0);
-                                Console.Write("Tie");
-                                isGameWin = true;
-                            }
+                                mode = mode == 'X' ? '0' : 'X';
 
-                            Console.SetCursorPosition(index, row);
+                                Console.ResetColor();
+                                Console.SetCursorPosition(4, 1);
+                                Console.Write(mode);
+
+                                if (!field[0].Contains('-'))
+                                    isTie[0] = true;
+                                if (!field[1].Contains('-'))
+                                    isTie[1] = true;
+                                if (!field[2].Contains('-'))
+                                    isTie[2] = true;
+
+                                if (isTie[0] && isTie[1] && isTie[2])
+                                {
+                                    Console.ResetColor();
+                                    Console.SetCursorPosition(4, 0);
+                                    Console.Write("Tie");
+                                    isGameWin = true;
+                                }
+
+                                Console.SetCursorPosition(index, row);
+                            }
                         }
                         break;
                     case ConsoleKey.Escape:
